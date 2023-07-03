@@ -14,9 +14,9 @@ Docker CLI:
 
 ```sh
 docker run -d \
-  --name=sandbox \
+  --name=debian_sandbox \
   ghcr.io/dbushell/debian \
-  && docker exec -it sandbox zsh
+  && docker exec -it debian_sandbox zsh
 ```
 
 Docker Compose:
@@ -24,13 +24,13 @@ Docker Compose:
 ```yml
 services:
   debian:
-    container_name: sandbox
+    container_name: debian_sandbox
     image: ghcr.io/dbushell/debian
 ```
 
 ```sh
 docker compose up -d \
-  && docker exec -it sandbox zsh
+  && docker exec -it debian_sandbox zsh
 ```
 
 (Enter `exit` to escape the container.)
@@ -38,13 +38,13 @@ docker compose up -d \
 ### Shell Access
 
 ```sh
-docker exec -it sandbox zsh
+docker exec -it debian_sandbox zsh
 ```
 
 ### Clean Up
 
 ```sh
-docker stop sandbox && docker rm sandbox
+docker stop debian_sandbox && docker rm debian_sandbox
 ```
 
 * * *
