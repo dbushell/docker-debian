@@ -1,9 +1,9 @@
-FROM debian:12.0-slim as debian-base
+FROM debian:12.1-slim as debian-base
 
 ARG TARGETARCH
 
 ARG DENO_TAG
-ENV DENO_TAG ${DENO_TAG:-v1.35.0}
+ENV DENO_TAG ${DENO_TAG:-v1.36.4}
 
 ARG USER
 ENV USER ${USER:-user}
