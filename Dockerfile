@@ -1,11 +1,11 @@
-FROM debian:12.2-slim as debian-base
+FROM debian:12.4-slim as debian-base
 
 ARG TARGETARCH
 
 ARG NODE_TAG
 ENV NODE_TAG ${NODE_TAG:-21.x}
 ARG DENO_TAG
-ENV DENO_TAG ${DENO_TAG:-v1.39.0}
+ENV DENO_TAG ${DENO_TAG:-v1.40.0}
 
 ARG USER
 ENV USER ${USER:-user}
